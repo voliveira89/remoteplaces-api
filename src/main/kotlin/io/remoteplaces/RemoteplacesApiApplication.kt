@@ -1,4 +1,4 @@
-package io.remoteplaces.remoteplacesapi
+package io.remoteplaces
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
