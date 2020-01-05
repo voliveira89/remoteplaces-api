@@ -2,7 +2,7 @@ version: "3"
 
 services:
 
-  maridadb:
+  mariadb:
     image: mariadb:10.4.11-bionic
     ports:
       - 3306:3306
@@ -12,7 +12,8 @@ services:
       MYSQL_PASSWORD: rppassword
       MYSQL_DATABASE: rp
     volumes:
-      - "mariadb_data:/var/lib/mysql"
+      - mariadb_data:/var/lib/mysql
+      - ./mariadb_config:/docker-entrypoint-initdb.d/
 
 volumes:
   mariadb_data:
